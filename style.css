@@ -1,0 +1,32 @@
+p {
+  font-size: 1.2rem;
+}
+
+
+/* MODAL */
+.popup-wrapper {
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.popup {
+  width: 100%;
+  max-width: 300px;
+  margin: 10% auto;
+  padding: 30px 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 4px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
