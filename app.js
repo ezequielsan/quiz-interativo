@@ -19,17 +19,8 @@ const correctAnswers = ['B', 'C', 'D', 'B', 'B', 'C', 'C', 'A', 'C', 'C'];
 
 let score = 0;
 
-const getUserAnswers = () => {
-  let userAnswers = [];
-
-  correctAnswers.forEach((_, index) => {
-    const userAnswer = form[`inputQuestion${index + 1}`].value;
-
-    userAnswers.push(userAnswer);
-  })
-
-  return userAnswers;
-}
+const getUserAnswers = () => correctAnswers.map((_, index) => 
+  form[`inputQuestion${index + 1}`].value);
 
 const calculateUserScore = userAnswers => {  
   correctAnswers.forEach((correctAnswer, index) => {
@@ -53,7 +44,6 @@ const animateFinalScore = () => {
   let counter = 0;
 
   const timer = setInterval(() => {
-    console.log(score, counter);
 
     if(counter === score) clearInterval(timer);
 
