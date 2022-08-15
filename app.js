@@ -51,11 +51,16 @@ const animateFinalScore = () => {
   }, 30);
 }
 
+const resetUserScore = () => {
+  score = 0;
+}
+
 const handleFormSubmission = event => {
   event.preventDefault();
-
+  
   const userAnswers = getUserAnswers();
-
+  
+  resetUserScore();
   calculateUserScore(userAnswers);
   showFinalScore();
   animateFinalScore();
